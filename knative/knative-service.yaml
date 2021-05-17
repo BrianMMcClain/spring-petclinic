@@ -1,0 +1,10 @@
+apiVersion: serving.knative.dev/v1 # Current version of Knative
+kind: Service
+metadata:
+  name: petclinic-knative # The name of the app
+  namespace: default # The namespace the app will use
+spec:
+  template:
+    spec:
+      containers:
+       - image: index.docker.io/brianmmcclain/petclinic-argo-demo@sha256:eeabe2409f3a4cbc8fdb38b5b45752e31f2e6357de719218efd41e807f0944a4
